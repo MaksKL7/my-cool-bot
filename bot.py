@@ -135,7 +135,7 @@ async def show_top(message: types.Message):
         rank = get_rank(stats['wins'])
         top_text += f"{i}. {name} — 💰{stats['balance']} зубів ({rank})\n"
 
-    await message.answer(top_text, parse_mode="Markdown")
+    await message.answer(top_text)
 
 
 # --- 4. КАЗИНО ТА ІГРИ З КНОПКАМИ ---
@@ -348,4 +348,5 @@ async def main():
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
+
     asyncio.run(main())
